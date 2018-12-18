@@ -1,0 +1,79 @@
+{
+    "sectionName": "Contact",
+    "questions": [
+      {
+        "displayTag": "First Name",
+        "trigger": "",
+        "negativeTrigger": "",
+        "isMandatory": "Y",
+        "widgetType": "QuestionString",
+        "questionId": "customerFirstName",
+        "isParentQuest": "N",
+        "isDefaultQuest": "Y",
+        "questSequence": 1,
+        "moduleName": "Yes",
+        "childQuestion": "N",
+        "childQuestionID": null
+      },
+      {
+        "displayTag": "Middle Name",
+        "trigger": "",
+        "negativeTrigger": "",
+        "isMandatory": "N",
+        "widgetType": "QuestionString",
+        "questionId": "customerMiddleName",
+        "isParentQuest": "N",
+        "isDefaultQuest": "Y",
+        "questSequence": 2,
+        "childQuestion": "N",
+        "childQuestionID": null
+      },
+      {
+        "displayTag": "Last Name",
+        "trigger": "",
+        "negativeTrigger": "",
+        "isMandatory": "Y",
+        "widgetType": "QuestionString",
+        "questionId": "customerLastName",
+        "isParentQuest": "N",
+        "isDefaultQuest": "Y",
+        "questSequence": 3,
+        "childQuestion": "N",
+        "childQuestionID": null
+      },
+      {
+        "displayTag": "Primary Country",
+        "trigger": "",
+        "negativeTrigger": "",
+        "isMandatory": "Y",
+        "widgetType": "QuestionSelect",
+        "questionId": "primaryCountry",
+        "isParentQuest": "N",
+        "isDefaultQuest": "Y",
+        "questSequence": 15,
+        "childQuestion": "N",
+        "childQuestionID": null
+      },
+      {
+        "displayTag": "Is the client using a DBA Name or Special Name?",
+        "trigger": "",
+        "negativeTrigger": "",
+        "isMandatory": "Y",
+        "widgetType": "QuestionRadio",
+        "options": [
+          {
+            "label": "Yes"
+          },
+          {
+            "label": "No"
+          }
+        ],
+        "questionId": "client_name_special",
+        "isParentQuest": "N",
+        "isDefaultQuest": "Y",
+        "questSequence": 10,
+        "childQuestion": "Y",
+        "childQuestionID": "q123"
+      }
+    ]
+  }

@@ -1,0 +1,313 @@
+[
+	{
+		"key": "client_Name",
+		"defaultValue": ["Agnoletto, Daniele Virginio"],
+		"type": "QuestionStringName",
+		"templateOptions": {
+			"label": "Client Name",
+			"placeholder": "Client Name",
+			"toolTip": "What is the client's name?",
+			"isRequired": "Y",
+			"fldMinSize": "1",
+			"fldMaxSize": "-1",
+			"isDefault": "Y",
+			"childQuestion": "QST_NA",
+			"rulesMap": null
+		}
+	},
+	{
+		"key": "business_Internal_Name",
+		"defaultValue": ["AGNOLETTO, DANIELE VIRGINIO"],
+		"type": "QuestionStringName",
+		"templateOptions": {
+			"label": "Business Internal Name",
+			"placeholder": "Business Internal Name",
+			"toolTip": "Business Internal Name is utilized for example to differentiate Branches and Fund/Fund Managers for GFCIDs which have the same ISO Legal Name",
+			"isRequired": "N",
+			"fldMinSize": "-1",
+			"fldMaxSize": "1",
+			"isDefault": "Y",
+			"childQuestion": "QST_NA",
+			"rulesMap": null
+		}
+	},
+	{
+		"key": "client_Name_DBA",
+		"defaultValue": [false],
+		"type": "QuestionRadio",
+		"templateOptions": {
+			"label": "Is the client using a DBA Name or Special Name?",
+			"placeholder": "Is the client using a DBA Name or Special Name?",
+			"toolTip": "Is the client using a \"Doing Business As\" (DBA) name  or \"Special Name\" (i.e. when the entity's name on the customer account is not the legal name of the entity/person who actually owns the business entity that has opened the account)?",
+			"isRequired": "Y",
+			"fldMinSize": "1",
+			"fldMaxSize": "-1",
+			"isDefault": "Y",
+			"childQuestion": "DBA_Grid",
+			"rulesMap": {
+				"options": [
+					{
+						"ruleId": "removeDBA_Grid_TR_BNKForclient_Name_DBA_TR_BNKALLCORE_CIV",
+						"expression": "client_Name_DBA == false || client_Name_DBA == null",
+						"ruleType": "RemoveQuestionFromWidgetRule",
+						"label": "No",
+						"actionQstLst": [
+							"DBA_Grid"
+						]
+					},
+					{
+						"ruleId": "addDBA_Grid_TR_BNKForclient_Name_DBA_TR_BNKALLCORE_CIV",
+						"expression": "client_Name_DBA == true",
+						"ruleType": "AddToWidgetQuestionRule",
+						"label": "Yes",
+						"actionQstLst": [
+							"DBA_Grid"
+						]
+					}
+				]
+			}
+		}
+	},
+	{
+		"key": "DBA_Grid",
+		"defaultValue": [],
+		"type": "MetaDBAGrid",
+		"templateOptions": {
+			"label": "DBA Details",
+			"placeholder": "DBA Details",
+			"toolTip": null,
+			"isRequired": "Y",
+			"fldMinSize": "1",
+			"fldMaxSize": "-1",
+			"isDefault": "N",
+			"childQuestion": "QST_NA",
+			"rulesMap": null
+		}
+	},
+	{
+		"key": "client_name_special",
+		"defaultValue": "",
+		"type": "QuestionRadio",
+		"templateOptions": {
+			"label": "Is the client using a numbered account name?",
+			"placeholder": "Is the client using a numbered account name?",
+			"toolTip": "Is the client using an identifier other than its legal name? (e.g., numbered account)",
+			"isRequired": "Y",
+			"fldMinSize": "1",
+			"fldMaxSize": "-1",
+			"isDefault": "Y",
+			"childQuestion": "certification_of_Assumed_Name",
+			"rulesMap": {
+				"options": [
+					{
+						"ruleId": "removecertification_of_Assumed_NameForclient_name_specialALLCORE_CIV",
+						"expression": "client_name_special == false || client_name_special == null",
+						"ruleType": "RemoveQuestionFromWidgetRule",
+						"label": "No",
+						"actionQstLst": [
+							"certification_of_Assumed_Name"
+						]
+					},
+					{
+						"ruleId": "addcertification_of_Assumed_NameForclient_name_specialALLCORE_CIV",
+						"expression": "client_name_special == true",
+						"ruleType": "AddToWidgetQuestionRule",
+						"label": "Yes",
+						"actionQstLst": [
+							"certification_of_Assumed_Name"
+						]
+					}
+				]
+			}
+		}
+	},
+	{
+		"key": "certification_of_Assumed_Name",
+		"defaultValue": "",
+		"type": "MetaMultipleFileUploadField",
+		"templateOptions": {
+			"label": "Certification of Assumed Name",
+			"placeholder": "Certification of Assumed Name",
+			"toolTip": "If the Client is using a \"DBA Name\" or \"Special Name/Numbered Account\", then obtain a state or local government certificate evidencing registration of the name of the entity.",
+			"isRequired": "Y",
+			"fldMinSize": "1",
+			"fldMaxSize": "-1",
+			"isDefault": "N",
+			"childQuestion": "QST_NA",
+			"rulesMap": null
+		}
+	},
+	{
+		"key": "PRIMARY",
+		"defaultValue": "",
+		"type": "MetadataClientInfoAddressEditor",
+		"templateOptions": {
+			"label": "Primary Address ",
+			"placeholder": "Primary Address ",
+			"toolTip": null,
+			"isRequired": "Y",
+			"fldMinSize": "1",
+			"fldMaxSize": "-1",
+			"isDefault": "Y",
+			"childQuestion": "QST_NA",
+			"rulesMap": null
+		}
+	},
+	{
+		"key": "PhoneInformation",
+		"defaultValue": [
+			[{
+				"id": 15796155,
+				"phoneType": "Business",
+				"phoneNumber": "3123213123123",
+				"otherType": null,
+				"addImage": "add",
+				"counter": 1
+			},{
+				"id": 15796156,
+				"phoneType": "Mobile",
+				"phoneNumber": "9738384470",
+				"otherType": null,
+				"addImage": "add",
+				"counter": 2
+			}]
+		],
+		"type": "MetaPhoneGrid",
+		"templateOptions": {
+			"label": "Phone Details",
+			"placeholder": "Phone Details",
+			"toolTip": null,
+			"isRequired": "Y",
+			"fldMinSize": "1",
+			"fldMaxSize": "-1",
+			"isDefault": "Y",
+			"childQuestion": null,
+			"rulesMap": {},
+			"options": {
+				"label": "Yes",
+				"value": "client_Name_DBA"
+			}
+		}
+	},
+	{
+		"key": "types_of_Address_MultiSelectGrid",
+		"defaultValue": "",
+		"type": "MultiQuestionList",
+		"templateOptions": {
+			"label": "Additional Address Type",
+			"placeholder": "Additional Address Type",
+			"toolTip": "If the client has an additional address, what type of address is it? ",
+			"isRequired": "N",
+			"fldMinSize": "-1",
+			"fldMaxSize": "1",
+			"isDefault": "Y",
+			"childQuestion": "REGISTERED",
+			"rulesMap": {
+				"options": [
+					{
+						"ruleId": "removeINCORPORATEDFortypes_of_Address_MultiSelectGridALLCORE_CIV",
+						"expression": "types_of_Address_MultiSelectGrid == null || types_of_Address_MultiSelectGrid != 'INCORPORATED'",
+						"ruleType": "RemoveQuestionFromWidgetRule",
+						"label": "No",
+						"actionQstLst": [
+							"INCORPORATED"
+						]
+					},
+					{
+						"ruleId": "addINCORPORATEDFortypes_of_Address_MultiSelectGridALLCORE_CIV",
+						"expression": "types_of_Address_MultiSelectGrid == 'INCORPORATED'",
+						"ruleType": "AddToWidgetQuestionRule",
+						"label": "Yes",
+						"actionQstLst": [
+							"INCORPORATED"
+						]
+					},
+					{
+						"ruleId": "removeMAILINGFortypes_of_Address_MultiSelectGridALLCORE_CIV",
+						"expression": "types_of_Address_MultiSelectGrid == null || types_of_Address_MultiSelectGrid != 'MAILING'",
+						"ruleType": "RemoveQuestionFromWidgetRule",
+						"label": "No",
+						"actionQstLst": [
+							"MAILING"
+						]
+					},
+					{
+						"ruleId": "addMAILINGFortypes_of_Address_MultiSelectGridALLCORE_CIV",
+						"expression": "types_of_Address_MultiSelectGrid == 'MAILING'",
+						"ruleType": "AddToWidgetQuestionRule",
+						"label": "Yes",
+						"actionQstLst": [
+							"MAILING"
+						]
+					},
+					{
+						"ruleId": "addREGISTEREDFortypes_of_Address_MultiSelectGridALLCORE_CIV",
+						"expression": "types_of_Address_MultiSelectGrid == 'REGISTERED'",
+						"ruleType": "AddToWidgetQuestionRule",
+						"label": "Yes",
+						"actionQstLst": [
+							"REGISTERED"
+						]
+					},
+					{
+						"ruleId": "removeREGISTEREDFortypes_of_Address_MultiSelectGridALLCORE_CIV",
+						"expression": "types_of_Address_MultiSelectGrid == null || types_of_Address_MultiSelectGrid != 'REGISTERED'",
+						"ruleType": "RemoveQuestionFromWidgetRule",
+						"label": "No",
+						"actionQstLst": [
+							"REGISTERED"
+						]
+					}
+				]
+			}
+		}
+	},
+	{
+		"key": "REGISTERED",
+		"defaultValue": "",
+		"type": "MetadataAddressInfoEditor",
+		"templateOptions": {
+			"label": "Registered Address",
+			"placeholder": "Registered Address",
+			"toolTip": "Registered Address",
+			"isRequired": "N",
+			"fldMinSize": "-1",
+			"fldMaxSize": "1",
+			"isDefault": "N",
+			"childQuestion": "QST_NA",
+			"rulesMap": null
+		}
+	},
+	{
+		"key": "MAILING",
+		"defaultValue": "",
+		"type": "MetadataAddressInfoEditor",
+		"templateOptions": {
+			"label": "Mailing Address",
+			"placeholder": "Mailing Address",
+			"toolTip": "Mailing Address",
+			"isRequired": "N",
+			"fldMinSize": "-1",
+			"fldMaxSize": "1",
+			"isDefault": "N",
+			"childQuestion": "QST_NA",
+			"rulesMap": null
+		}
+	},
+	{
+		"key": "INCORPORATED",
+		"defaultValue": "",
+		"type": "MetadataAddressInfoEditor",
+		"templateOptions": {
+			"label": "Incorporated Address",
+			"placeholder": "Incorporated Address",
+			"toolTip": "Incorporated Address",
+			"isRequired": "N",
+			"fldMinSize": "-1",
+			"fldMaxSize": "1",
+			"isDefault": "N",
+			"childQuestion": "QST_NA",
+			"rulesMap": null
+		}
+	}
+]

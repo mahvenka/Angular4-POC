@@ -1,0 +1,18 @@
+[
+  {
+    "key": "country_Domicile_Inc",
+    "defaultValue": "",
+    "type": "QuestionSelect",
+    "templateOptions": {
+      "label": "Country of Formation / Incorporation / Registration",
+      "placeholder": "Country of Formation / Incorporation / Registration",
+      "toolTip": "The country in which the company is incorporated, legally registered, formed or established.",
+      "isRequired": "Y",
+      "fldMinSize": "1",
+      "fldMaxSize": "-1",
+      "isDefault": "Y",
+      "childQuestion": "QST_NA",
+      "rulesMap": null
+    }
+  }
+]

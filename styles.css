@@ -1,0 +1,174 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #53565a;
+    background-color: #ffffff;
+}
+
+
+/* Footer Style Start */
+#citi-footer {
+    margin-top: 24px;
+    font-size: 11px;
+}
+
+#citi-footer .navbar {
+    margin: 0 0 10px;
+    border-bottom: 2px solid #D0D0D0;
+}
+
+#citi-footer .navbar-inner {
+    min-height: 26px;
+    padding: 0 !important;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#citi-footer .navbar-inner a {
+    font-weight: normal;
+    color: #3b3d3f;
+}
+
+#citi-footer .navbar-inner a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+#citi-footer .navbar-inner ul a {
+    padding: 0 25px 0 0;
+    text-transform: uppercase;
+}
+
+/* Footer Style Start */
+
+.ui-widget-header{
+    border: 1px solid rgb(226,219,219);
+    background: #dddddd;
+    color: #53565a;
+    font-weight: bold;
+}
+.ui-widget-content{
+    background: #FFFFFF;
+}
+
+/*For All Components  */
+.board {
+    width: 100%;
+    margin: 20px auto;
+    min-height: 280px;
+    background: #fff;
+    box-shadow: 2px 0px 4px 4px #e8e7e7;
+}
+
+.nav-tabs>li a {
+    width: 50px;
+    height: 50px;
+    margin: 20px auto;
+    border-radius: 100%;
+    padding: 0;
+}
+
+.nav-tabs>li>a {
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+}
+
+span.round-tabs.two {
+    color: #febe29;
+    border: 2px solid #febe29;
+}
+span.round-tabs{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    border-radius: 100px;
+    background: #fff;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
+}
+
+span.round-tabs.three {
+    color: #f1685e;
+    border: 2px solid #f1685e;
+}
+
+span.round-tabs.one {
+    color: #22c222;
+    border: 2px solid #22c222;
+}
+
+.nav-tabs>li {
+    width: 25%;
+    float: left;
+    margin-bottom: -1px;
+}
+.nav>li {
+    position: relative;
+    display: block;
+    /* margin-left: -60px; */
+}
+
+.liner {
+    height: 2px;
+    background: #e0cfcf;
+    width: 50%;
+    margin-left: 100px;
+    position: relative;
+    top: 50px;
+}
+
+#status-buttons a.active span.round-tabs.one {
+    background: #22c222;
+    color: #fff;
+}
+
+#status-buttons a.active span.round-tabs.two {
+    background: #febe29;
+    color: #fff;
+}
+
+#status-buttons a.active span.round-tabs.three {
+    background: #f1685e;
+    color: #fff;
+}
+a{
+    color: #007bff;
+    
+}
+
+/* PrimeNg Tootltip Styles */
+.ui-tooltip {
+    position:absolute;
+    display:none;
+    padding: .25em .5em;
+    max-width: 20.5em;
+}
+
+.ui-tooltip .ui-tooltip-text {
+    padding: .125em .5em;
+    background-color: rgb(76, 76, 76);
+    color: #ffffff;
+    white-space: pre-line;
+ }
+ .ui-tooltip-bottom .ui-tooltip-arrow {
+    top: 0;
+    left: 50%;
+    margin-left: -.25em;
+    border-width: 0 .25em .25em;
+    border-bottom-color: rgb(76, 76, 76);
+}

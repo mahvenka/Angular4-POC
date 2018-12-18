@@ -1,0 +1,21 @@
+.nav-underline .active {
+    font-weight: 500;
+    color: var(--gray-dark);
+}
+.inboxMenu a.nav-link {
+    background: #e6e6e6;
+    border: 1px solid #cac3c3;
+    margin: 1px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: .2rem 1rem;
+    color: #545454;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.inboxMenu a.nav-link.active{
+    background: #f9f9f9;
+    font-size: 14px;
+    color: #000;
+}

@@ -1,0 +1,50 @@
+<client-info></client-info>
+<div class="container-fluid" style="background: #f7f8fc;">
+    <div class="row" style="padding:0 5%;">
+        <div class="col-md-12">
+            <div class="progress-wrap">
+                <img class="img-fluid" src="./assets/images/progress-icons.png" />
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <div class="row" style="width: 100%;
+                    margin: 20px auto;
+                    min-height: 280px;
+                    background: #fff;
+                    box-sizing: border-box;
+                    box-shadow: 0 0 20px rgba(0,0,0,0.2);">
+
+                <div class="col-md-3 order-md-1 mb-4">
+                    <h4 class="title mb-3 p-3">Client Identification and Verification </h4>
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item ">
+                            <a class="nav-link" [routerLinkActive]="'active'" routerLink="/clientIdentificationandVerification/contact">
+                                <i class="fa fa-arrow-right"></i> Contact Information
+                              </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLinkActive]="'active'" routerLink="/clientIdentificationandVerification/identity">
+                                <i class="fa fa-arrow-right"></i> Identity
+                                </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLinkActive]="'active'" routerLink="/clientIdentificationandVerification/country">
+                                <i class="fa fa-arrow-right"></i> Country  
+                                </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-md-9 order-md-2">
+                    <!-- Content Area -->
+                    <div class="tab-content mt-3">
+                        <router-outlet></router-outlet>
+                        <!-- Nested view  -->
+                    </div>
+                    <!-- End Content Area -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

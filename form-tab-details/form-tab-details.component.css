@@ -1,0 +1,40 @@
+.navbar-light .navbar-nav .active>.nav-link{
+    color: #005aa1 ;
+    background: #f7f8fc;
+    font-weight: 700;
+}
+.navbar-light .navbar-nav .nav-link{
+    font-size: 12px;
+    padding: 10px;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    text-decoration: underline;
+}
+
+.navbar-light .navbar-nav .active > .nav-link:hover{
+    text-decoration: none;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background: none;
+    color: #3390e0;
+}
+.nav-pills .nav-link {
+    border-radius: .25rem;
+    color: #707173;
+    font-family: serif;
+    font-size: 16px;
+}
+i.fa.fa-arrow-right{
+    font-size: 10px;
+}
+.nav-link{
+    padding: .3rem 1rem;
+}
+a{
+    cursor: pointer;
+    background: transparent;
+}
+a:link{
+    -webkit-tap-highlight-color: rgba(0,0,0,0.3);
+}

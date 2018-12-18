@@ -1,0 +1,53 @@
+{
+  "sectionName": "DBA",
+  "questions": [
+    {
+      "displayTag": "DBA Name",
+      "trigger": "",
+      "negativeTrigger": "",
+      "isMandatory": "Y",
+      "widgetType": "QuestionString",
+      "questionId": "dbaName",
+      "isParentQuest": "N",
+      "isDefaultQuest": "Y",
+      "questSequence": 1,
+      "moduleName": "Yes",
+      "childQuestion": "N",
+      "childQuestionID": null
+    },
+    {
+      "displayTag": "Certification of Assumed Name",
+      "trigger": "",
+      "negativeTrigger": "",
+      "isMandatory": "N",
+      "widgetType": "QuestionFile",
+      "questionId": "certificationFlie",
+      "isParentQuest": "N",
+      "isDefaultQuest": "Y",
+      "questSequence": 2,
+      "childQuestion": "N",
+      "childQuestionID": null
+    },
+    {
+      "displayTag": "Is the DBA Address the same as the Client's Primary Address, including Primary Country?",
+      "trigger": "",
+      "negativeTrigger": "",
+      "isMandatory": "Y",
+      "widgetType": "QuestionRadio",
+      "options": [
+        {
+          "label": "Yes"
+        },
+        {
+          "label": "No"
+        }
+      ],
+      "questionId": "dba_name_special",
+      "isParentQuest": "N",
+      "isDefaultQuest": "Y",
+      "questSequence": 3,
+      "childQuestion": "Y",
+      "childQuestionID": "dba123"
+    }
+  ]
+}

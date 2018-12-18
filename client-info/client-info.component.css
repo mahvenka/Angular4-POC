@@ -1,0 +1,56 @@
+.header {
+    color: #005aa1 !important;
+}
+.txt_size {
+
+    font-size: 11px;
+    line-height: 15px;
+    color: #707173;
+    font-weight: 600;
+}
+.child{
+    font-weight: normal;
+}
+
+.txt {
+    font-weight: bold;
+    color: #53565a;
+}
+
+.txt p{
+    margin-bottom: 0rem !important;
+}
+
+.big-icon{
+    font-size: 20px;
+    color: #005aa1;
+    margin: 0 0 0 10px;
+}
+
+.icon-right{
+    float: right;
+    padding-top: 10px;
+}
+
+.button-div{
+    padding-top: 40px;
+    float: right;
+}
+
+button#btn-primary.btn-sm-lt{
+    color: #005aa1;
+    border: 1px solid #005aa1;
+    border-radius: 2px;
+    padding: 5px 8px;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 200;
+    background: #fff;
+}
+button#btn-primary.btn-sm-lt:hover{
+    background-color:#004f8d;
+    color: #FFF;
+}
+
+
+

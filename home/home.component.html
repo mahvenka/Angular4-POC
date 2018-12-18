@@ -1,0 +1,81 @@
+<div class="container-fluid">
+    <!-- body content -->
+    <div class="row profile py-4">
+        <!-- Right Side bar -->
+        <div class="col-md-4 order-md-2 mb-3">
+            <div class="col-md-12">
+                <div class="media-body mb-3">
+                    <p-panel header="Search" [collapsed]="false" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+                        <label for="field1">Client Name:</label><input class="form-control-sm" type="text" id="field1"> <br/>
+                        <label for="field2">Business Internal Name:</label><input class="form-control-sm" type="text" id="field2"> <br/>
+                        <label for="field3">Client Segment:</label><select id="field3" class="form-control-sm"><option value="Entity">Entity</option><option value="Individual">Individual</option></select><br/>
+                        <label for="field4">Client Id:</label><input class="form-control-sm" type="text" id="field4"> <br/>
+                        <label for="field5">Country:</label><input class="form-control-sm" type="text" id="field5"> <br/>
+                        <input class="btn btn-primary" type="button" value="Search">
+                    </p-panel>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="media-body mb-3">
+                    <p-panel header="Favourites" [collapsed]="false" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+                        <a class="nav-link" [routerLink]="['/add_record']">Add KYC Record</a>
+                        <a class="nav-link" [routerLink]="['/modify_record']">Modify KYC Record</a>
+                        <a class="nav-link" [routerLink]="['/deactivate_record']">Deactivate KYC Record</a>
+                        <a class="nav-link" [routerLink]="['/reactivate_record']">Reactivate KYC Record</a>
+
+                    </p-panel>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="media-body mb-3">
+                    <p-panel header="My Preferences" [collapsed]="true" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+                        <p>Current Settings</p>
+                        <p>Language:English (default)</p>
+                        <p>Date:mm-dd-yyyy</p>
+                    </p-panel>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-8 order-md-1 pl-0 pr-0">
+            <div class="col-lg-12 col-md-12">
+                <div class="profile-content">
+                    <div class="col-md-12">
+                        <div class="media-body mb-3">
+                            <p-panel [collapsed]="true" header="My Inbox" [toggleable]="true" [style]="{'margin-bottom':'20px'}" >
+                                <ag-grid-angular [enableSorting]="true" [enableFilter]="true" style="width: 100%; height: 300px;" class="ag-theme-balham"
+                                [rowHeight]="32" [headerHeight]="30" [rowData]="rowData" [columnDefs]="columnDefs"
+                                [pagination]="true" [animateRows]="true" [paginationPageSize]="10" (rowClicked)="progressOnRowClicked($event)"
+                                (gridReady)="onGridReady($event)">
+                                </ag-grid-angular>
+                            </p-panel>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="media-body mb-3">
+                            <p-panel [collapsed]="false" header="Reports Dashboard" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+                                <div>
+                                    <canvas baseChart
+                                        [datasets]="barChartData"
+                                        [labels]="barChartLabels"
+                                        [options]="barChartOptions"
+                                        [legend]="barChartLegend"
+                                        [chartType]="barChartType"
+                                        [colors]="barChartColors"
+                                        class="align-graph">
+                                    </canvas>
+                                </div>
+                            </p-panel>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,26 @@
+
+h4.title{
+	color:#3390e0;
+    font-size:16px;
+    line-height: 24px;
+	font-weight:700;
+	margin-bottom: 50px;
+	text-align: left;
+	padding-bottom:10px;
+	position:releative;
+}
+
+h4.title::before{
+    background: #3390e0 none repeat scroll 0 0;
+    top: 70px;
+    content: "";
+    height: 3px;
+    position: absolute;
+    width: 18%;
+    left: 15%;
+}
+.progress-wrap{
+    width: 50%;
+    margin: 30px auto;
+}
+

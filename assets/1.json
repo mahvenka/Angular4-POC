@@ -1,0 +1,164 @@
+[
+    {
+      "clientId": "1000212462",
+      "clientIdType": "GFCID",
+      "clientName": "OBERBANK AG",
+      "bin": "OBERBANK",
+      "workItemID": "61384331",
+      "CountryOfCitiService":"United States",
+      "RecordCreationDate":"08-10-2018"
+    },
+    {
+      "clientId": "1000212463",
+      "clientIdType": "GFCID",
+      "clientName": "AEOCC Management",
+      "bin": "AEOCC",
+      "workItemID": "61384332",
+      "CountryOfCitiService":"Malasiya",
+      "RecordCreationDate":"11-04-2017"
+    },
+    {
+        "clientId": "1000212464",
+        "clientIdType": "GFCID",
+        "clientName": "OBERBANK AG",
+        "bin": "OBERBANK",
+        "workItemID": "61384333",
+        "CountryOfCitiService":"Malasiya",
+        "RecordCreationDate":"11-04-2017"
+    },
+    {
+        "clientId": "1000212465",
+        "clientIdType": "GFCID",
+        "clientName": "OBERBANK AG",
+        "bin": "OBERBANK",
+        "workItemID": "61384334",
+        "CountryOfCitiService":"Portugal",
+        "RecordCreationDate":"14-11-2018"
+    },
+    {
+        "clientId": "1000212463",
+        "clientIdType": "GFCID",
+        "clientName": "AEOCC Management",
+        "bin": "AEOCC",
+        "workItemID": "61384332",
+        "CountryOfCitiService":"Malasiya",
+        "RecordCreationDate":"11-04-2017"
+      },
+    {
+        "clientId": "1000212466",
+        "clientIdType": "GFCID",
+        "clientName": "OBERBANK AG",
+        "bin": "OBERBANK",
+        "workItemID": "61384335",
+        "CountryOfCitiService":"Taiwan",
+        "RecordCreationDate":"14-11-2018"
+    },
+    {
+        "clientId": "1000212466",
+        "clientIdType": "GFCID",
+        "clientName": "OBERBANK AG",
+        "bin": "OBERBANK",
+        "workItemID": "61384335",
+        "CountryOfCitiService":"United States",
+        "RecordCreationDate":"16-12-2017"
+    },
+    {
+        "clientId": "1000212463",
+        "clientIdType": "GFCID",
+        "clientName": "AEOCC Management",
+        "bin": "AEOCC",
+        "workItemID": "61384332",
+        "CountryOfCitiService":"Malasiya",
+        "RecordCreationDate":"11-04-2017"
+      },
+    {
+        "clientId": "1000212466",
+        "clientIdType": "GFCID",
+        "clientName": "OBERBANK AG",
+        "bin": "OBERBANK",
+        "workItemID": "61384335",
+        "CountryOfCitiService":"United States",
+        "RecordCreationDate":"16-12-2017"
+    },
+    {
+        "clientId": "1000212466",
+        "clientIdType": "GFCID",
+        "clientName": "OBERBANK AG",
+        "bin": "OBERBANK",
+        "workItemID": "61384335",
+        "CountryOfCitiService":"Taiwan",
+        "RecordCreationDate":"14-11-2018"
+    },
+    {
+        "clientId": "1000212463",
+        "clientIdType": "GFCID",
+        "clientName": "AEOCC Management",
+        "bin": "AEOCC",
+        "workItemID": "61384332",
+        "CountryOfCitiService":"Malasiya",
+        "RecordCreationDate":"11-04-2017"
+      },
+    {
+        "clientId": "1000212466",
+        "clientIdType": "GFCID",
+        "clientName": "OBERBANK AG",
+        "bin": "OBERBANK",
+        "workItemID": "61384335",
+        "CountryOfCitiService":"Taiwan",
+        "RecordCreationDate":"14-11-2018"
+    },
+    {
+        "clientId": "1000212462",
+        "clientIdType": "GFCID",
+        "clientName": "OBERBANK AG",
+        "bin": "OBERBANK",
+        "workItemID": "61384331",
+        "CountryOfCitiService":"United States",
+        "RecordCreationDate":"08-10-2018"
+      },
+      {
+        "clientId": "1000212463",
+        "clientIdType": "GFCID",
+        "clientName": "AEOCC Management",
+        "bin": "AEOCC",
+        "workItemID": "61384332",
+        "CountryOfCitiService":"United States",
+        "RecordCreationDate":"08-10-2018"
+      },
+      {
+        "clientId": "1000212462",
+        "clientIdType": "GFCID",
+        "clientName": "OBERBANK AG",
+        "bin": "OBERBANK",
+        "workItemID": "61384331",
+        "CountryOfCitiService":"United States",
+        "RecordCreationDate":"08-10-2018"
+      },
+      {
+        "clientId": "1000212463",
+        "clientIdType": "GFCID",
+        "clientName": "AEOCC Management",
+        "bin": "AEOCC",
+        "workItemID": "61384332",
+        "CountryOfCitiService":"United States",
+        "RecordCreationDate":"08-10-2018"
+      },
+      {
+        "clientId": "1000212462",
+        "clientIdType": "GFCID",
+        "clientName": "OBERBANK AG",
+        "bin": "OBERBANK",
+        "workItemID": "61384331",
+        "CountryOfCitiService":"United States",
+        "RecordCreationDate":"08-10-2018"
+      },
+      {
+        "clientId": "1000212463",
+        "clientIdType": "GFCID",
+        "clientName": "AEOCC Management",
+        "bin": "AEOCC",
+        "workItemID": "61384332",
+        "CountryOfCitiService":"United States",
+        "RecordCreationDate":"08-10-2018"
+      }
+]

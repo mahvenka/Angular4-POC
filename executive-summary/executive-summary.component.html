@@ -1,0 +1,92 @@
+<client-info></client-info>
+<div class="container-fluid">
+        <div class="row">
+                <div class="col-md-12">
+                        <div class="card">
+                                <div class="cf">
+                                        <div *ngIf="!loadingFlag">
+                                                <img class="loader" src="./assets/images/loader.gif">
+                                        </div>
+                                        <div *ngIf="loadingFlag">           
+                                                <div class="row">
+                                                        <div class="col-md-4">
+                                                                <h4>CLIENT NAME</h4>
+                                                                <p>{{execData.clientName}}</p>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                                <h4>BUSINESS INTERNAL NAME</h4>
+                                                                <p>{{execData.businessInternalName}}</p>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                                <h4>cLIENT TYPE</h4>
+                                                                <p>{{execData.clientType}}</p>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                                <h4>RISK RATING</h4>
+                                                                <p>{{execData.riskRating}}</p>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                                <h4>MANUAL COMPLIANCE: RISK RATING OVERRIDE APPLIED</h4>
+                                                                <p>{{execData.riskOverride}}</p>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                                <h4>COUNTRY OF PRIMARY BUSINESS OPERATIONS</h4>
+                                                                <p>{{execData.countryPrimaryOps}}</p>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                                <h4>COUNTY(IES) OF CITI SERVICE</h4>
+                                                                <p>{{execData.citiServiceCountryCode}}</p>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                                <h4>EXISTING CITI RELATIONSHIP</h4>
+                                                                <p>{{execData.existingCitiRelationship}}</p>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                                <h4>START DATE OF RELATIONSHIP</h4>
+                                                                <p>{{execData.startDateOfCitiRelationship}}</p>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                                <h4>RELATIONSHIP LENGTH</h4>
+                                                                <p>{{execData.relationshipLength}}</p>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                                <h4>SHARE TYPES</h4>
+                                                                <p>{{execData.shareTypes}}</p>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                                <h4>REVENUE (USD)</h4>
+                                                                <p>${{execData.revenueUSD}}</p>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                                <h4>MAJOR EXCHANGES</h4>
+                                                                <p>{{execData.listOfMajorExchanges}}</p>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                                <h4>PARENT PUBLICLY TRADED</h4>
+                                                                <p>{{execData.clientParentPubliclyTraded}}</p>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                                <h4>PARENT MAJOR STOCK EXCHANGE</h4>
+                                                                <p>{{execData.exchangeUltimateParentMajorStockExchange}}</p>
+                                                        </div>
+                                                </div>
+                                                <div class="next-box">
+                                                        <div class="row">
+                                                                <div class="col-md-8">
+                                                                        <h2>Next Step</h2>
+                                                                        <p>Client Identification and Verfication</p>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                        <a routerLink="/clientIdentificationandVerification/contact" class="btn-harder">
+                                                                                        Continue
+                                                                        </a>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+</div>

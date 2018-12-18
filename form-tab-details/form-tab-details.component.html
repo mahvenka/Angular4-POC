@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="row" style="padding:0 5%;">
+        <div class="col-md-12">
+            <div class="nav-scroller bg-white box-shadow">
+                <nav class="navbar navbar-expand-lg navbar-light" style="padding:0">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item" [class.active]="currentUrl===tabs.route" *ngFor="let tabs of tabsList;">
+                                <a class="nav-link" (click)="switchToTab(tabs)">{{tabs.displayText}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>

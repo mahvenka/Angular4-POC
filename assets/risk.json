@@ -1,0 +1,102 @@
+[
+  {
+    "risk":[{
+      "riskorr":"No",
+      "spf":"No"
+    }]
+  },
+  {
+  "client":[{
+        "label": "Beneficial Ownership",
+        "response": "5 or FEWER OWNERS",
+        "rate": "10",
+        "rating": "HIGH HIGH",
+        "points": "7.698116"
+      },
+      {
+        "label": "Entity Type/Corporate Structure",
+        "response": "5 or FEWER OWNERS",
+        "rate": "0",
+        "rating": "HIGH HIGH",
+        "points": "NA"
+      },
+      {
+        "label": "Industry Type",
+        "response": "Electronic Communication Eqiupment",
+        "rate": "2",
+        "rating": "LOW",
+        "points": "NA"
+      },
+      {
+        "label": "Length of Relationship",
+        "response": "",
+        "rate": "0",
+        "rating": "HIGH HIGH",
+        "points": "NA"
+      },
+      {
+        "label": "Share Types (Public vs. Private)",
+        "response": "",
+        "rate": "0",
+        "rating": "HIGH HIGH",
+        "points": "NA"
+      }]
+  },
+  {
+  "geo":[{
+        "label": "Country Accounts Established ",
+        "response": "United States",
+        "rate": "4",
+        "rating": "MEDIUM",
+        "points": "6.4562"
+      },
+      {
+        "label": "Country of Incorporation",
+        "response": "United States",
+        "rate": "4",
+        "rating": "MEDIUM",
+        "points": "8.165"
+      },
+      {
+        "label": "Country of Primar Business Operations",
+        "response": "",
+        "rate": "3",
+        "rating": "HIGH HIGH",
+        "points": "7.698116"
+      },
+      {
+        "label": "Cross Border Flag",
+        "response": "",
+        "rate": "3",
+        "rating": "HIGH HIGH",
+        "points": "NA"
+      }]
+  },
+  {
+    "political":[{
+        "label": "Senior Public Figure",
+        "response": "5 or FEWER OWNERS",
+        "rate": "0",
+        "rating": "HIGH HIGH",
+        "points": "NA"
+    }]
+  },
+  {
+    "product":[{
+        "label": "HRAC / High Risk Product Usage",
+        "response": "",
+        "rate": "0",
+        "rating": "HIGH HIGH",
+        "points": "NA"
+    }]
+  },
+  {
+    "reputation":[{
+        "label": "Composite Reputation and Negative News",
+        "response": "5 or FEWER OWNERS",
+        "rate": "0",
+        "rating": "HIGH HIGH",
+        "points": "NA"
+    }]
+  }
+]

@@ -1,0 +1,71 @@
+{
+    "sectionName": "DBA Address",
+    "questions": [
+      {
+        "displayTag": "Address",
+        "trigger": "",
+        "negativeTrigger": "",
+        "isMandatory": "Y",
+        "widgetType": "QuestionString",
+        "questionId": "dbaAddress",
+        "isParentQuest": "N",
+        "isDefaultQuest": "Y",
+        "questSequence": 1,
+        "moduleName": "Yes",
+        "childQuestion": "N",
+        "childQuestionID": null
+      },
+      {
+        "displayTag": "City",
+        "trigger": "",
+        "negativeTrigger": "",
+        "isMandatory": "N",
+        "widgetType": "QuestionString",
+        "questionId": "dbaCity",
+        "isParentQuest": "N",
+        "isDefaultQuest": "Y",
+        "questSequence": 2,
+        "childQuestion": "N",
+        "childQuestionID": null
+      },
+      {
+        "displayTag": "State/Province",
+        "trigger": "",
+        "negativeTrigger": "",
+        "isMandatory": "N",
+        "widgetType": "QuestionString",
+        "questionId": "dbaState",
+        "isParentQuest": "N",
+        "isDefaultQuest": "Y",
+        "questSequence": 2,
+        "childQuestion": "N",
+        "childQuestionID": null
+      },      
+      {
+        "displayTag": "Postal Code",
+        "trigger": "",
+        "negativeTrigger": "",
+        "isMandatory": "Y",
+        "widgetType": "QuestionString",
+        "questionId": "dbaState",
+        "isParentQuest": "N",
+        "isDefaultQuest": "Y",
+        "questSequence": 3,
+        "childQuestion": "N",
+        "childQuestionID": null
+      },
+      {
+        "displayTag": "Country",
+        "trigger": "",
+        "negativeTrigger": "",
+        "isMandatory": "Y",
+        "widgetType": "QuestionString",
+        "questionId": "dbaCountry",
+        "isParentQuest": "N",
+        "isDefaultQuest": "Y",
+        "questSequence": 3,
+        "childQuestion": "N",
+        "childQuestionID": null
+      }
+    ]
+  }

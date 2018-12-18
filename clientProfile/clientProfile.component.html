@@ -1,0 +1,44 @@
+<client-info>
+</client-info>
+
+<div class="container-fluid">
+        <div class="row">
+                <div class="col-md-12">
+                        <div class="card">
+                                <div class="row" style="padding: 0px;">
+                                        <div class="col-md-4 align work-item">
+                                                <h4>Work Item Id</h4>
+                                                <p>{{workItems.globalWorkItemID}}</p>
+                                        </div>
+                                        <div class="col-md-4 align work-item">
+                                                <h4>Work Item Type</h4>
+                                                <p>{{workItems.workItemTypeDesc}}</p>
+                                        </div>
+                                        <div class="col-md-4 align work-item">
+                                                <h4>Work Item Due Date</h4>
+                                                <p>{{workItems.dueDate}}</p>
+                                        </div>
+                                </div>
+                                <div class="row" style="padding: 0px;">
+                                        <div class="col-md-4 align work-item">
+                                                <h4>Work Item Created On</h4>
+                                                <p>{{workItems.creationDate}}</p>
+                                        </div>
+                                        <div class="col-md-4 align work-item">
+                                                <h4>Work Item Priority</h4>
+                                                <p>{{workItems.priorityDescription}}</p>
+                                        </div>
+                                        <div class="col-md-4 align work-item">
+                                                <h4>Work Item Trigger</h4>
+                                                <p>{{workItems.workItemTriggerDesc}}</p>
+                                        </div>
+                                </div>
+                                <div class="next-box">
+                                        <h2> Next step </h2>
+                                        <p> Executive Summary </p>
+                                        <a class="btn-harder" routerLink="/executive-summary">Continue</a>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>

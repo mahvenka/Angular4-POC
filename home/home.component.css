@@ -1,0 +1,47 @@
+p.bgColor{
+    background: #ededed;
+    padding: 5px;
+    border-radius: 3px;
+}
+i.iColor{
+    padding: 4px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    font-size: 11px;
+    color: #737272;
+    margin: 1px 2px;
+}
+label{
+    display: inline-block;
+    text-align: left;
+    padding: 2px;
+    margin: 5px;
+}
+input[type=text] {
+    width: 35%;
+    height: 10%;
+    padding: 0.5%;
+    margin: 1%;
+    float: right;
+    box-sizing: border-box;
+}
+select{
+    width: 35%;
+    height: 10%;
+    padding: 0.5%;
+    margin: 1%;
+    float: right;
+    box-sizing: border-box;
+}
+/* input[type=button]{
+    width: 35%;
+    height: 10%;
+    padding: 0.5%;
+    margin: 1%;
+    float: right;
+    box-sizing: border-box;
+    display: inline;
+} */
+a{
+    color: #007bff;
+}

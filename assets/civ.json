@@ -1,0 +1,62 @@
+[
+  {
+    "displayTag": "First Name",
+    "trigger": "",
+    "negativeTrigger": "",
+    "isMandatory": "Y",
+    "widgetType": "QuestionString",
+    "questionId": "customerFirstName",
+    "sectionName": "Contact",
+    "isParentQuest": "N",
+    "isDefaultQuest": "Y",
+    "questSequence": 1
+  },
+  {
+    "displayTag": "Middle Name",
+    "trigger": "",
+    "negativeTrigger": "",
+    "isMandatory": "N",
+    "widgetType": "QuestionString",
+    "questionId": "customerMiddleName",
+    "sectionName": "Contact",
+    "isParentQuest": "N",
+    "isDefaultQuest": "Y",
+    "questSequence": 2
+  },
+  {
+    "displayTag": "Last Name",
+    "trigger": "",
+    "negativeTrigger": "",
+    "isMandatory": "Y",
+    "widgetType": "QuestionString",
+    "questionId": "customerLastName",
+    "sectionName": "Contact",
+    "isParentQuest": "N",
+    "isDefaultQuest": "Y",
+    "questSequence": 3
+  },
+  {
+    "displayTag": "Primary Country",
+    "trigger": "",
+    "negativeTrigger": "",
+    "isMandatory": "Y",
+    "widgetType": "QuestionSelect",
+    "questionId": "primaryCountry",
+    "sectionName": "Contact",
+    "isParentQuest": "N",
+    "isDefaultQuest": "Y",
+    "questSequence": 15
+  },
+  {
+    "displayTag": "Is the Client using a Special Name/Numbered Account Name?",
+    "trigger": "",
+    "negativeTrigger": "",
+    "isMandatory": "Y",
+    "widgetType": "QuestionRadio",
+    "questionId": "client_name_special",
+    "sectionName": "Contact",
+    "isParentQuest": "N",
+    "isDefaultQuest": "Y",
+    "questSequence": 10
+  }
+]

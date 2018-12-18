@@ -1,0 +1,549 @@
+[
+  {
+    "key": "gov_ID_Number",
+    "defaultValue": "",
+    "type": "QuestionEmail",
+    "templateOptions": {
+      "label": "Government/Regulatory/Taxpayer identification number",
+      "placeholder": "Government/Regulatory/Taxpayer identification number",
+      "toolTip": "If the entity is a US Entity then the Taxpayer Identification Number (TIN) is required. If the entity is a non-US entity then either their Taxpayer Identification Number or other Government-issued ID number must be obtained.",
+      "isRequired": "Y",
+      "fldMinSize": "1",
+      "fldMaxSize": "255",
+      "isDefault": "Y",
+      "childQuestion": "country_Gov_ID",
+      "rulesMap": {
+        "options": [
+          {
+            "ruleId": "removeother_ID_Desc_TR_corpForgov_ID_NumberALLCORE_CIV",
+            "expression": "gov_ID_Number == null",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "other_ID_Desc"
+            ]
+          },
+          {
+            "ruleId": "addid_Num_Type_TR_corpForgov_ID_NumberALLCORE_CIV",
+            "expression": "gov_ID_Number != null",
+            "ruleType": "AddToWidgetQuestionRule",
+            "label": "Yes",
+            "actionQstLst": [
+              "id_Num_Type"
+            ]
+          },
+          {
+            "ruleId": "removeid_Num_Type_TR_corpForgov_ID_NumberALLCORE_CIV",
+            "expression": "gov_ID_Number == null",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "id_Num_Type"
+            ]
+          },
+          {
+            "ruleId": "addcountry_Gov_IDForgov_ID_NumberALLCORE_CIV",
+            "expression": "gov_ID_Number != null",
+            "ruleType": "AddToWidgetQuestionRule",
+            "label": "Yes",
+            "actionQstLst": [
+              "country_Gov_ID"
+            ]
+          },
+          {
+            "ruleId": "removecountry_Gov_IDForgov_ID_NumberALLCORE_CIV",
+            "expression": "gov_ID_Number == null",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "country_Gov_ID"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "country_Gov_ID",
+    "defaultValue": "",
+    "type": "QuestionSelect",
+    "hide": null,
+    "templateOptions": {
+      "label": "Country issuing government ID",
+      "placeholder": "Country issuing government ID",
+      "toolTip": "Name of country that issued Government/Regulatory/Taxpayer identification number",
+      "isRequired": "Y",
+      "fldMinSize": "1",
+      "fldMaxSize": "-1",
+      "isDefault": "N",
+      "childQuestion": "QST_NA",
+      "rulesMap": null
+    }
+  },
+  {
+    "key": "id_Num_Type",
+    "defaultValue": "",
+    "type": "QuestionSelect",
+    "hide": "true",
+    "templateOptions": {
+      "label": "Tax/Government ID Number Type",
+      "placeholder": "Tax/Government ID Number Type",
+      "toolTip": "If the entity is a US Entity then the Taxpayer Identification Number (TIN) is required. If the entity is a non-US entity then either their Taxpayer Identification Number or other Government-issued ID number must be obtained.",
+      "isRequired": "Y",
+      "fldMinSize": "1",
+      "fldMaxSize": "-1",
+      "isDefault": "N",
+      "childQuestion": "other_ID_Desc",
+      "rulesMap": {
+        "options": [
+          {
+            "ruleId": "addother_ID_Desc_TR_corpForid_Num_Type_TR_corpALLCORE_CIV",
+            "expression": "id_Num_Type == 'OTH'",
+            "ruleType": "AddToWidgetQuestionRule",
+            "label": "Yes",
+            "actionQstLst": [
+              "other_ID_Desc"
+            ]
+          },
+          {
+            "ruleId": "removeother_ID_Desc_TR_corpForid_Num_Type_TR_corpALLCORE_CIV",
+            "expression": "id_Num_Type == null || id_Num_Type != 'OTH'",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "other_ID_Desc"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "other_ID_Desc",
+    "defaultValue": "",
+    "type": "QuestionString",
+    "hide": null,
+    "templateOptions": {
+      "label": "Description of \"Other\"",
+      "placeholder": "Description of \"Other\"",
+      "toolTip": "Description of ID Type if \"Other\" is chosen",
+      "isRequired": "Y",
+      "fldMinSize": "1",
+      "fldMaxSize": "1000",
+      "isDefault": "N",
+      "childQuestion": "QST_NA",
+      "rulesMap": null
+    }
+  },
+  {
+    "key": "id_Verify_Means_MultiSelectGrid",
+    "defaultValue": "",
+    "type": "MultiQuestionList",
+    "hide": "true",
+    "templateOptions": {
+      "label": "Means of Identity Verification",
+      "placeholder": "Means of Identity Verification",
+      "toolTip": "Whether Documentary (e.g. articles of organization) or Non-Documentary means (e.g. commercial databases) were used as the process for verifying the identity of the client. This standard should record which specific documentation has been collected to meet the standards for tax ID documents and proof of legal existence; If a copy of a document has been collected, the Business should identify how it can be accessed. This may be accomplished by uploading the document, providing a link to the document, or providing the location of the document.",
+      "isRequired": "Y",
+      "fldMinSize": "1",
+      "fldMaxSize": "-1",
+      "isDefault": "Y",
+      "childQuestion": "ID_Verify_Means_Other",
+      "rulesMap": {
+        "options": [
+          {
+            "ruleId": "removedoc_Type_Loc_CorpsForid_Verify_Means_MultiSelectGrid_TR_InstALLCORE_CIV",
+            "expression": "id_Verify_Means_MultiSelectGrid == null || id_Verify_Means_MultiSelectGrid != 'DOC'",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "document_Type_Location"
+            ]
+          },
+          {
+            "ruleId": "removedatabase_Verified_Upload_DocForid_Verify_Means_MultiSelectGrid_TR_InstALLCORE_CIV",
+            "expression": "id_Verify_Means_MultiSelectGrid == null || id_Verify_Means_MultiSelectGrid != 'DOC'",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "database_Verified_Upload_Doc"
+            ]
+          },
+          {
+            "ruleId": "removedocumentary_Provided_by_Client_MultiSelectGridForid_Verify_Means_MultiSelectGrid_TR_InstALLCORE_CIV",
+            "expression": "id_Verify_Means_MultiSelectGrid == null || id_Verify_Means_MultiSelectGrid != 'DOC'",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "documentary_Provided_by_Client_MultiSelectGrid"
+            ]
+          },
+          {
+            "ruleId": "adddocumentary_Provided_by_Client_MultiSelectGridForid_Verify_Means_MultiSelectGrid_TR_InstALLCORE_CIV",
+            "expression": "id_Verify_Means_MultiSelectGrid == 'DOC'",
+            "ruleType": "AddToWidgetQuestionRule",
+            "label": "Yes",
+            "actionQstLst": [
+              "documentary_Provided_by_Client_MultiSelectGrid"
+            ]
+          },
+          {
+            "ruleId": "removedatabase_Type_Link_TR_OthForid_Verify_Means_MultiSelectGrid_TR_InstALLCORE_CIV",
+            "expression": "id_Verify_Means_MultiSelectGrid == null || id_Verify_Means_MultiSelectGrid != 'NONDOC'",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "database_Type_Link"
+            ]
+          },
+          {
+            "ruleId": "removedatabase_Verified_UploadForid_Verify_Means_MultiSelectGrid_TR_InstALLCORE_CIV",
+            "expression": "id_Verify_Means_MultiSelectGrid == null || id_Verify_Means_MultiSelectGrid != 'NONDOC'",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "database_Verified_Upload"
+            ]
+          },
+          {
+            "ruleId": "addnon_Documentary_Provided_by_Client_MultiSelectGrid_TR_InstForid_Verify_Means_MultiSelectGrid_TR_InstALLCORE_CIV",
+            "expression": "id_Verify_Means_MultiSelectGrid == 'NONDOC'",
+            "ruleType": "AddToWidgetQuestionRule",
+            "label": "Yes",
+            "actionQstLst": [
+              "non_Documentary_Provided_by_Client_MultiSelectGrid"
+            ]
+          },
+          {
+            "ruleId": "removenon_Documentary_Provided_by_Client_MultiSelectGrid_TR_InstForid_Verify_Means_MultiSelectGrid_TR_InstALLCORE_CIV",
+            "expression": "id_Verify_Means_MultiSelectGrid == null || id_Verify_Means_MultiSelectGrid != 'NONDOC'",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "non_Documentary_Provided_by_Client_MultiSelectGrid"
+            ]
+          },
+          {
+            "ruleId": "removeID_Verify_Means_Other_TR_InstForid_Verify_Means_MultiSelectGrid_TR_InstALLCORE_CIV",
+            "expression": "id_Verify_Means_MultiSelectGrid == null || id_Verify_Means_MultiSelectGrid != 'OTH'",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "ID_Verify_Means_Other"
+            ]
+          },
+          {
+            "ruleId": "addID_Verify_Means_Other_TR_InstForid_Verify_Means_MultiSelectGrid_TR_InstALLCORE_CIV",
+            "expression": "id_Verify_Means_MultiSelectGrid == 'OTH'",
+            "ruleType": "AddToWidgetQuestionRule",
+            "label": "Yes",
+            "actionQstLst": [
+              "ID_Verify_Means_Other"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "ID_Verify_Means_Other",
+    "defaultValue": "",
+    "type": "QuestionString",
+    "templateOptions": {
+      "label": "Other",
+      "placeholder": "Other",
+      "toolTip": "if other is selected from pick list, then enter \"Other\" details in text box",
+      "isRequired": "Y",
+      "fldMinSize": "1",
+      "fldMaxSize": "1024",
+      "isDefault": "N",
+      "childQuestion": "QST_NA",
+      "rulesMap": null
+    }
+  },
+  {
+    "key": "non_Documentary_Provided_by_Client_MultiSelectGrid",
+    "defaultValue": "",
+    "type": "MultiQuestionList",
+    "templateOptions": {
+      "label": "ID Verification Type",
+      "placeholder": "ID Verification Type",
+      "toolTip": "By which non-documentary means was the client's identity and government/tax ID verified?",
+      "isRequired": "Y",
+      "fldMinSize": "1",
+      "fldMaxSize": "-1",
+      "isDefault": "N",
+      "childQuestion": "database_Verified_Upload",
+      "rulesMap": {
+        "options": [
+          {
+            "ruleId": "adddatabase_Type_Link_TR_OthFornon_Documentary_Provided_by_Client_MultiSelectGrid_TR_InstALLCORE_CIV",
+            "expression": "non_Documentary_Provided_by_Client_MultiSelectGrid != null",
+            "ruleType": "AddToWidgetQuestionRule",
+            "label": "Yes",
+            "actionQstLst": [
+              "database_Type_Link"
+            ]
+          },
+          {
+            "ruleId": "removedatabase_Type_Link_TR_OthFornon_Documentary_Provided_by_Client_MultiSelectGrid_TR_InstALLCORE_CIV",
+            "expression": "non_Documentary_Provided_by_Client_MultiSelectGrid == null",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "database_Type_Link"
+            ]
+          },
+          {
+            "ruleId": "adddatabase_Verified_UploadFornon_Documentary_Provided_by_Client_MultiSelectGrid_TR_InstALLCORE_CIV",
+            "expression": "non_Documentary_Provided_by_Client_MultiSelectGrid != null",
+            "ruleType": "AddToWidgetQuestionRule",
+            "label": "Yes",
+            "actionQstLst": [
+              "database_Verified_Upload"
+            ]
+          },
+          {
+            "ruleId": "removedatabase_Verified_UploadFornon_Documentary_Provided_by_Client_MultiSelectGrid_TR_InstALLCORE_CIV",
+            "expression": "non_Documentary_Provided_by_Client_MultiSelectGrid == null",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "database_Verified_Upload"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "database_Verified_Upload",
+    "defaultValue": "",
+    "type": "MetaMultipleFileUploadFieldSub",
+    "templateOptions": {
+      "label": "Screenprint Upload",
+      "placeholder": "Screenprint Upload",
+      "toolTip": "Upload a copy of the means used to verify the client's identity and tax/government ID number.",
+      "isRequired": "Y",
+      "fldMinSize": "1",
+      "fldMaxSize": "-1",
+      "isDefault": "N",
+      "childQuestion": "database_Type_Link",
+      "rulesMap": {
+        "options": [
+          {
+            "ruleId": "removedatabase_Type_Link_TR_OthFordatabase_Verified_UploadALLCORE_CIV",
+            "expression": "database_Verified_Upload != null",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "database_Type_Link"
+            ]
+          },
+          {
+            "ruleId": "adddatabase_Type_Link_TR_OthFordatabase_Verified_UploadALLCORE_CIV",
+            "expression": "database_Verified_Upload == null",
+            "ruleType": "AddToWidgetQuestionRule",
+            "label": "Yes",
+            "actionQstLst": [
+              "database_Type_Link"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "database_Type_Link",
+    "defaultValue": "",
+    "type": "QuestionString",
+    "templateOptions": {
+      "label": "Database Link",
+      "placeholder": "Database Link",
+      "toolTip": "Identify where the non-documentary verification can be accessed. This may be accomplished by uploading a screenshot from a website, or providing a link to the website. If the non documentary verification is already store in a database, provide the link to the database.",
+      "isRequired": "Y",
+      "fldMinSize": "1",
+      "fldMaxSize": "1024",
+      "isDefault": "N",
+      "childQuestion": "QST_NA",
+      "rulesMap": null
+    }
+  },
+  {
+    "key": "documentary_Provided_by_Client_MultiSelectGrid",
+    "defaultValue": "",
+    "type": "MultiQuestionList",
+    "templateOptions": {
+      "label": "Document Type",
+      "placeholder": "Document Type",
+      "toolTip": "What documentation did the Client provide showing the tax/government ID and proof of existence? Identify what specific documentation was collected to meet the standards for tax ID documents and proof of legal existence.",
+      "isRequired": "Y",
+      "fldMinSize": "1",
+      "fldMaxSize": "-1",
+      "isDefault": "N",
+      "childQuestion": "database_Verified_Upload_Doc",
+      "rulesMap": {
+        "options": [
+          {
+            "ruleId": "adddoc_Type_Loc_CorpsFordocumentary_Provided_by_Client_MultiSelectGridALLCORE_CIV",
+            "expression": "documentary_Provided_by_Client_MultiSelectGrid != null",
+            "ruleType": "AddToWidgetQuestionRule",
+            "label": "Yes",
+            "actionQstLst": [
+              "document_Type_Location"
+            ]
+          },
+          {
+            "ruleId": "removedoc_Type_Loc_CorpsFordocumentary_Provided_by_Client_MultiSelectGridALLCORE_CIV",
+            "expression": "documentary_Provided_by_Client_MultiSelectGrid == null",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "document_Type_Location"
+            ]
+          },
+          {
+            "ruleId": "removedatabase_Verified_Upload_DocFordocumentary_Provided_by_Client_MultiSelectGridALLCORE_CIV",
+            "expression": "documentary_Provided_by_Client_MultiSelectGrid == null",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "database_Verified_Upload_Doc"
+            ]
+          },
+          {
+            "ruleId": "adddatabase_Verified_Upload_DocFordocumentary_Provided_by_Client_MultiSelectGridALLCORE_CIV",
+            "expression": "documentary_Provided_by_Client_MultiSelectGrid != null",
+            "ruleType": "AddToWidgetQuestionRule",
+            "label": "Yes",
+            "actionQstLst": [
+              "database_Verified_Upload_Doc"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "database_Verified_Upload_Doc",
+    "defaultValue": "",
+    "type": "MetaMultipleFileUploadFieldSub",
+    "templateOptions": {
+      "label": "Document Upload",
+      "placeholder": "Document Upload",
+      "toolTip": "Upload a copy of the document(s) used to verify the client's identity and tax/government ID number.",
+      "isRequired": "Y",
+      "fldMinSize": "1",
+      "fldMaxSize": "-1",
+      "isDefault": "N",
+      "childQuestion": "document_Type_Location",
+      "rulesMap": {
+        "options": [
+          {
+            "ruleId": "adddoc_Type_Loc_CorpsFordatabase_Verified_Upload_DocALLCORE_CIV",
+            "expression": "database_Verified_Upload_Doc == null",
+            "ruleType": "AddToWidgetQuestionRule",
+            "label": "Yes",
+            "actionQstLst": [
+              "document_Type_Location"
+            ]
+          },
+          {
+            "ruleId": "removedoc_Type_Loc_CorpsFordatabase_Verified_Upload_DocALLCORE_CIV",
+            "expression": "database_Verified_Upload_Doc != null",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "document_Type_Location"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "document_Type_Location",
+    "defaultValue": "",
+    "type": "QuestionString",
+    "templateOptions": {
+      "label": "Document Location",
+      "placeholder": "Document Location",
+      "toolTip": "Identify how a copy of the documentary verification can be accessed. This may be accomplished by uploading the document, providing a link to the document, or providing the location of the document.",
+      "isRequired": "Y",
+      "fldMinSize": "1",
+      "fldMaxSize": "1024",
+      "isDefault": "N",
+      "childQuestion": "QST_NA",
+      "rulesMap": null
+    }
+  },
+  {
+    "key": "subst_Discrepancy",
+    "defaultValue": "",
+    "type": "QuestionRadio",
+    "templateOptions": {
+      "label": "Substantive Discrepancies",
+      "placeholder": "Substantive Discrepancies",
+      "toolTip": "Were any substantial discrepancies discovered between information obtained from the client and information obtained during verification?",
+      "isRequired": "Y",
+      "fldMinSize": "1",
+      "fldMaxSize": "-1",
+      "isDefault": "Y",
+      "childQuestion": "subst_Discrepancy_Details",
+      "rulesMap": {
+        "options": [
+          {
+            "ruleId": "removesubst_Discrepancy_DetailsForsubst_DiscrepancyALLCORE_CIV",
+            "expression": "subst_Discrepancy == false || subst_Discrepancy == null",
+            "ruleType": "RemoveQuestionFromWidgetRule",
+            "label": "No",
+            "actionQstLst": [
+              "subst_Discrepancy_Details"
+            ]
+          },
+          {
+            "ruleId": "addsubst_Discrepancy_DetailsForsubst_DiscrepancyALLCORE_CIV",
+            "expression": "subst_Discrepancy == true",
+            "ruleType": "AddToWidgetQuestionRule",
+            "label": "Yes",
+            "actionQstLst": [
+              "subst_Discrepancy_Details"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "key": "subst_Discrepancy_Details",
+    "defaultValue": "",
+    "type": "QuestionString",
+    "templateOptions": {
+      "label": "Substantive Discrepancy Details",
+      "placeholder": "Substantive Discrepancy Details",
+      "toolTip": "Provide details of any discrepancies between the information obtained from the client and the information obtained during verification.  (e.g., inability to verify entity name; or, inability to verify identification number, etc)",
+      "isRequired": "Y",
+      "fldMinSize": "1",
+      "fldMaxSize": "1000",
+      "isDefault": "N",
+      "childQuestion": "QST_NA",
+      "rulesMap": null
+    }
+  },
+  {
+    "key": "legal_Structure_Institution_Type",
+    "defaultValue": "",
+    "type": "QuestionSelectLarge",
+    "templateOptions": {
+      "label": "Entity Type/Legal Structure",
+      "placeholder": "Entity Type/Legal Structure",
+      "toolTip": "The legal structure of the client (e.g., partnership, LLC, etc.) Select the client's appropriate structure from the provided Drop-Down list.",
+      "isRequired": "Y",
+      "fldMinSize": "1",
+      "fldMaxSize": "-1",
+      "isDefault": "Y",
+      "childQuestion": "QST_NA",
+      "rulesMap": null
+    }
+  }
+]

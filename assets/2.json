@@ -1,0 +1,20 @@
+[
+    {
+      "clientId": "1000212462",
+      "clientIdType": "GFCID",
+      "clientName": "OBERBANK AG",
+      "bin": "OBERBANK",
+      "workItemID": "61384331",
+      "CountryOfCitiService":"United States",
+      "RecordCreationDate":"08-10-2018"
+    },
+    {
+      "clientId": "1000212463",
+      "clientIdType": "GFCID",
+      "clientName": "AEOCC Management",
+      "bin": "AEOCC",
+      "workItemID": "61384332",
+      "CountryOfCitiService":"United States",
+      "RecordCreationDate":"08-10-2018"
+    }
+]
